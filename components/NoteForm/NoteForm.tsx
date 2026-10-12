@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { postNote } from '../../lib/api';
 import css from './NoteForm.module.css';
 import type { PostNote, TagProps } from '../../types/note';
-import { useDraft } from '@/lib/stores/noteStore';
+import { useDraft } from '@/lib/store/noteStore';
 
 interface FormValues {
   title: string;
