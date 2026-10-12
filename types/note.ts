@@ -7,10 +7,9 @@ export interface Note {
   tag: TagProps;
 }
 
+export type TagProps = 'Todo' | 'Work' | 'Personal' | 'Meeting' | 'Shopping';
 export interface PostNote {
   title: string;
   content: string;
   tag: TagProps;
 }
-
-export type TagProps = 'Todo' | 'Work' | 'Personal' | 'Meeting' | 'Shopping';
