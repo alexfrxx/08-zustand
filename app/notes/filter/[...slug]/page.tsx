@@ -13,19 +13,20 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const tag = slug[0];
   return {
-    title: `Filtered by ${slug}`,
-    description: `Filtered notes by ${slug}`,
+    title: `Filtered by ${tag}`,
+    description: `Filtered notes by ${tag}`,
     openGraph: {
-      title: `Filtered by ${slug}`,
-      description: `Filtered notes by ${slug}`,
-      url: 'https://notehub.com/notes/filter/slug',
+      title: `Filtered by ${tag}`,
+      description: `Filtered notes by ${tag}`,
+      url: 'https://notehub.com/notes/filter/[tag]',
       images: [
         {
           url: 'https://ac.goit.global/fullstack/react/og-meta.jpg',
           width: 1200,
           height: 630,
-          alt: `Filtered by ${slug}`
+          alt: `Filtered by ${tag}`
         }
       ]
     }
