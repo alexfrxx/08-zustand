@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `Filtered by ${tag}`,
       description: `Filtered notes by ${tag}`,
-      url: 'https://notehub.com/notes/filter/[tag]',
+      url: `https://notehub.com/notes/filter/${tag}`,
       images: [
         {
           url: 'https://ac.goit.global/fullstack/react/og-meta.jpg',
